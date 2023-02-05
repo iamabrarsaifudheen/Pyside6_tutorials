@@ -20,19 +20,9 @@ app.exec()
 
 import sys
 from PySide6.QtWidgets import QApplication,QMainWindow,QPushButton
+from button_holder import ButtonHolder
 
 app=QApplication(sys.argv)
-
-class ButtonHolder(QMainWindow):
-     def __init__ (self):
-        super().__init__()
-        self.setWindowTitle("Button Holder App")
-        button = QPushButton("Press Me!")
-        #Set up the button as our central widget
-        self.setCentralWidget(button)
- 
-
-
 window=ButtonHolder()
 window.show()
 app.exec()
